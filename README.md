@@ -3,6 +3,7 @@
 pip freeze > requirements.txt
 
 python manage.py migrate
+python manage.py makemigrations
 
 python manage.py runserver
 pip install -Ur requirements.txt # Install Django via pip installing all dependencies in requirements.txt
@@ -19,3 +20,10 @@ https://pythonprogramming.net/first-site-django-python-tutorial/?completed=/djan
 https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1
 https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html
 https://medium.com/@djstein/modern-django-part-0-introduction-and-initial-setup-657df48f08f8
+
+# New Model
+1. Neues Model unter api/models | class Project(models.Model)
+2. Serializer api/serializers | class ProjectSerializer(serializers.HyperlinkedModelSerializer)
+3. url api/urls | router.register(r'projects', views.ProjectViewSet)
+4. view api/views | class ProjectViewSet(viewsets.ModelViewSet):
+! Migrate nicht vergessen
