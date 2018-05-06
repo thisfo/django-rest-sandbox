@@ -17,7 +17,7 @@ import environ
 ROOT_DIR = environ.Path(__file__) - 3
 
 # Directory for the app
-APPS_DIR = ROOT_DIR.path('backend')
+APPS_DIR = ROOT_DIR.path('backend') ################## <- right? 'django-rest-sandbox' or 'backend'?
 
 env = environ.Env()
 

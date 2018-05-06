@@ -2,8 +2,8 @@
 
 pip freeze > requirements.txt
 python manage.py runserver
-# Install Django via pip installing all dependencies in requirements.txt
-pip install -Ur requirements.txt
+pip install -Ur requirements.txt # Install Django via pip installing all dependencies in requirements.txt
+
 
 ## Tutorials
 LINKS
