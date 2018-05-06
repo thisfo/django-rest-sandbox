@@ -1,6 +1,9 @@
 # django-rest-sandbox
 
 pip freeze > requirements.txt
+
+python manage.py migrate
+
 python manage.py runserver
 pip install -Ur requirements.txt # Install Django via pip installing all dependencies in requirements.txt
 
