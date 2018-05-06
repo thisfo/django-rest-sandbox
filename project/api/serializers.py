@@ -10,6 +10,10 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+
     class Meta:
         model = Project
-        fields = ('url', 'project_title', 'project_owner')
+        fields = ('url', 'title', 'owner', 'date_created', 'date_modified')
+        read_only_fields = ('date_created', 'date_modified')
+

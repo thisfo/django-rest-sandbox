@@ -5,9 +5,12 @@ pip freeze > requirements.txt
 python manage.py migrate
 python manage.py makemigrations
 
+python manage.py createsuperuser
 python manage.py runserver
 pip install -Ur requirements.txt # Install Django via pip installing all dependencies in requirements.txt
 
+flo
+12qw12qw
 
 ## Tutorials
 LINKS
