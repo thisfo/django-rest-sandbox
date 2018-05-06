@@ -7,6 +7,9 @@ pip install -Ur requirements.txt
 
 ## Tutorials
 LINKS
+######
+https://medium.com/@djstein/modern-django-part-1-project-refactor-and-meeting-the-django-settings-api-d2784efb606f
+######
 http://www.django-rest-framework.org/#installation
 https://medium.com/netscape/full-stack-django-quick-start-with-jwt-auth-and-react-redux-part-i-37853685ab57
 https://pythonprogramming.net/first-site-django-python-tutorial/?completed=/django-web-development-with-python-intro/
