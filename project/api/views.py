@@ -4,6 +4,7 @@ from project.api.models import Project
 from rest_framework import viewsets
 from project.api.serializers import UserSerializer
 from project.api.serializers import ProjectSerializer
+from rest_framework import permissions
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -12,6 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = (permissions.IsAuthenticated,)
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -20,6 +22,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
     """
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    permission_classes = (permissions.IsAuthenticated,)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)

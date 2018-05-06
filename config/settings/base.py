@@ -46,6 +46,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'rest_framework',
+    'rest_framework.authtoken'
 )
 
 LOCAL_APPS = (
@@ -149,5 +150,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = str(APPS_DIR('media'))
 
 REST_FRAMEWORK = {
-
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }
