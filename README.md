@@ -1,5 +1,7 @@
 # django-rest-sandbox
 
+C:\Users\User\.virtualenvs\django-rest-sandbox\Scripts>activate
+
 pip freeze > requirements.txt
 
 python manage.py migrate
